@@ -1,0 +1,11 @@
+﻿body {
+    background-color: antiquewhite;
+}
+ol {
+    font-family: 'Times New Roman', Times, serif;
+    color: darkgoldenrod;
+}
+img {
+    width: 50%;
+    height: auto;
+}
