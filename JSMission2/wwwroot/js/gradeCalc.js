@@ -15,7 +15,7 @@ const calculate = () => {
         parseFloat(exams) * .20;
         parseFloat(intex) * .10;
 
-    let percentage = (totalgrades / 400) * 100;
+    let percentage = totalgrades;
     if (percentage <= 100 && percentage >= 94) {
         grades = "A";
     } else if (percentage < 94 && percentage >= 90) {
@@ -47,22 +47,9 @@ const calculate = () => {
         document.querySelector("#showdata").innerHTML
             = "Please enter all the fields";
     } else {
+        document.querySelector("#showdata").innerHTML =
+            ` Your final percentage is ${percentage}%. <br> 
+                  Your grade is ${grades}.`;
 
-        if (percentage >= 39.5) {
-            document.querySelctor(
-                "#showdata"
-            ).innerHTML =
-                ` Out of 400 your total is  ${totalgrades} 
-                and percentage is ${percentage}%. <br> 
-                   Your grade is ${grades}. You are Pass. `;
-        } else {
-            document.querySelctor(
-                "#showdata"
-            ).innerHTML =
-                ` Out of 400 your total is  ${totalgrades} 
-                  and percentage is ${percentage}%. <br> 
-                  Your grade is ${grades}. You are Fail. `;
-
-        }
     }
 }
