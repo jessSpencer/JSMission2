@@ -4,15 +4,15 @@
 @{
 }
 
-@model CalculatorModel;
+@model JSMission2.Models.CalculatorModel;
 
 
 <nav>
-    <a asp-controller="First" asp-action="Index" a>Home</a>
+    <a asp-controller="First" asp-action="Index">Home</a>
     <a asp-controller="First" asp-action="Calculator">Calculator</a>
 </nav>
 
-<form>
+<form method="post">
     <label>Assignments:</label>
     <input type="text" class="form-control" placeholder="Enter Here" id="assignments" asp-for="Assignments" /><br />
     <label>Group Projects:</label>
@@ -23,7 +23,6 @@
     <input type="text" class="form-control" placeholder="Enter Here" id="exams" asp-for="Exams" /><br />
     <label>INTEX:</label>
     <input type="text" class="form-control" placeholder="Enter Here" id="intex" asp-for="Intex" /><br />
-    <input type="submit" value="show Percentage" onclick="calculate()" />
+    <input type="submit"  id="calculate" value="show Percentage" />
 </form>
 
-<script src="js/gradeCalc.js"></script>

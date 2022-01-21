@@ -14,13 +14,13 @@ namespace JSMission2.Controllers
             return View();
         }
 
-        [HttpGet]
+        [HttpGet("Calculator")]
         public IActionResult Calculator()
         {
             return View();
         }
 
-        [HttpPost]
+        [HttpPost("Calculator")]
         public IActionResult Calculator(CalculatorModel model)
         {
             return View();
