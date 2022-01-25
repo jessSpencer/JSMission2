@@ -1,7 +1,7 @@
 ﻿
 $("#calculate").click(
     function () {
-    alert("We got here")
+
     let assignments = document.querySelector("#assignments").value;
     let groupProject = document.querySelector("#groupproject").value;
     let quizzes = document.querySelector("#quizzes").value;
@@ -13,8 +13,8 @@ $("#calculate").click(
         parseFloat(assignments) * .55 +
         parseFloat(groupProject) * .05 +
         parseFloat(quizzes) * .10 +
-        parseFloat(exams) * .20;
-    parseFloat(intex) * .10;
+        parseFloat(exams) * .20 +
+        parseFloat(intex) * .10;
 
     let percentage = totalgrades;
     if (percentage <= 100 && percentage >= 94) {
@@ -43,19 +43,13 @@ $("#calculate").click(
         grades = "E"
         }
 
-    alert("Your grade percentage is" + percentage + "Your grade is a" + grades)
 
+    if (assignments == "" || groupProject == ""
+        || quizzes == "" || exams == "" || intex == "") {
+        alert("Please enter the percentage for each grade.")
+    } else {
+        alert("Your grade percentage is " + percentage + ". Your grade is a " + grades);
 
-    //if (assignments == "" || groupProject == ""
-    //    || quizzes == "" || exams == "") {
-    //    document.querySelector("#showdata").innerHTML
-    //        = "Please enter all the fields";
-    //} else {
-       
-    //    document.querySelector("#showdata").innerHTML =
-    //        ` Your final percentage is ${percentage}%. <br> 
-    //              Your grade is ${grades}.`;
-
-    //}
+    }
 }
 )
